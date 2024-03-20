@@ -1,0 +1,47 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.filter-options {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.filter-options label {
+  font-weight: bold;
+  color: #fff; /* Light text color */
+}
+.filter-options input[type="date"],
+.filter-options input[type="text"],
+.filter-options select {
+  margin-bottom: 10px;
+  height: 30px;
+  padding: 5px;
+  background-color: #333; /* Dark input background */
+  color: #fff; /* Light text color */
+  border: 1px solid #555; /* Dark border */
+}
+
+.filter-options button {
+  background-color: #003063;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px 0px 0px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; 
+}
+
+.filter-options button:hover {
+  background-color: #0058b7; 
+}

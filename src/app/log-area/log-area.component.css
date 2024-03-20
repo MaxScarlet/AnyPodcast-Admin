@@ -1,0 +1,40 @@
+.log-area {
+  width: 100%;
+}
+
+.log-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.timestamp {
+  width: 230px; /* Adjust as needed */
+}
+
+.user-id {
+  width: 100px; /* Adjust as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.msg {
+  width: 150px; /* Adjust as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data {
+  width: auto; /* Allows the column to fill the remaining space */
+}
+.action {
+  width: 50px;
+}
+.data-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: -1;
+  width: 100%;
+}

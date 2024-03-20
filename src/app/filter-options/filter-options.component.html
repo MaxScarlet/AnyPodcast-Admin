@@ -1,0 +1,30 @@
+<!-- filter-options.component.html -->
+
+<div class="filter-options">
+  <div class="form-group">
+    <label>Date Range:</label>
+    <div style="display: flex; gap: 5px">
+      <input type="date" [(ngModel)]="startDate" />
+      <input type="date" [(ngModel)]="endDate" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Log Type:</label>
+    <select [(ngModel)]="selectedLogType">
+      <option value="">All</option>
+      <option value="Info">Info</option>
+      <option value="Error">Error</option>
+      <!-- Add more log types if needed -->
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Free Text Search:</label>
+    <input type="text" [(ngModel)]="searchText" />
+  </div>
+  <div class="form-group">
+    <button (click)="applyFilters()">Apply Filters</button>
+  </div>
+  <div class="form-group">
+    <button (click)="resetFilters()">Reset Filters</button>
+  </div>
+</div>
