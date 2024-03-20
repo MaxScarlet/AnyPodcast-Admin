@@ -8,7 +8,10 @@
 }
 
 .timestamp {
-  width: 230px; /* Adjust as needed */
+  width: 120px; /* Adjust as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .user-id {
@@ -19,7 +22,7 @@
 }
 
 .msg {
-  width: 150px; /* Adjust as needed */
+  width: 100px; /* Adjust as needed */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -32,7 +35,7 @@
   width: 50px;
 }
 .data-content {
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: -1;

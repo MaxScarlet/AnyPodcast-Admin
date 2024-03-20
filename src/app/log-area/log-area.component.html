@@ -3,21 +3,21 @@
     <thead>
       <tr>
         <th class="timestamp">Timestamp</th>
-        <th class="user-id">User ID</th>
+        <!-- <th class="user-id">User ID</th> -->
         <th class="msg">Message</th>
         <th class="data">Data</th>
-        <th class="action"></th>
+        <!-- <th class="action"></th> -->
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let log of logs">
-        <td class="timestamp">{{ log.Created | date : "medium" }}</td>
-        <td class="user-id" title="{{ log.UserID }}">{{ log.UserID }}</td>
+        <td class="timestamp">{{ this.timeStamp(log.Created)}}</td>
+        <!-- <td class="user-id" title="{{ log.UserID }}">{{ log.UserID }}</td> -->
         <td class="msg" title="{{ log.Msg }}">{{ log.Msg }}</td>
         <td class="data">
-          <div class="data-content">{{ log.Data }}</div>
+          <div class="data-content" title="{{log.Data}}">{{ log.Data }}</div>
         </td>
-        <td class="action">🚮</td>
+        <!-- <td class="action">🚮</td> -->
       </tr>
     </tbody>
   </table>
