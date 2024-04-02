@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { LogRec } from 'src/app/Models/log.interface';
-import { LoggerService } from '../Services/logger.service';
+import { Component } from '@angular/core';
 import { Filter } from 'src/app/Models/filter.interface';
+import { LogLevel, LogRec } from 'src/app/Models/log.interface';
+import { LoggerService } from '../Services/logger.service';
 
 @Component({
   selector: 'app-log-area',
@@ -10,8 +10,22 @@ import { Filter } from 'src/app/Models/filter.interface';
 })
 export class LogAreaComponent {
   public logs: LogRec[] = [];
+
   constructor(private loggerService: LoggerService) {}
 
+  logConvertToString(logLevel: LogLevel): string {
+    let img: string = '';
+    switch (logLevel) {
+      case LogLevel.DEBUG:
+        return (img = '🛠');
+      case LogLevel.INFO:
+        return (img = '🔎');
+      case LogLevel.WARN:
+        return (img = '⚠');
+      case LogLevel.ERROR:
+        return (img = '⛔');
+    }
+  }
   fetchLogs(filters: Filter) {
     this.loggerService.get<LogRec>(filters).subscribe(
       (response: LogRec[]) => {

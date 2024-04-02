@@ -13,7 +13,10 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
+.log-level {
+  width: 30px;
+  text-align: center;
+}
 .user-id {
   width: 100px; /* Adjust as needed */
   overflow: hidden;
